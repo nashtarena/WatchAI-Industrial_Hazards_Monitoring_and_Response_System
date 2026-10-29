@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "WatchAI",
+    "slug": "watchai",
+    "scheme": "watchai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#080B10",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.watchai.demo",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "WatchAI uses Face ID to unlock the safety monitoring console."
+      }
+    },
+    "android": {
+      "package": "com.watchai.demo",
+      "adaptiveIcon": {
+        "backgroundColor": "#080B10",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT",
+        "VIBRATE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "WatchAI uses Face ID to unlock the safety monitoring console."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#FF3B3B"
+        }
+      ],
+      "expo-video"
+    ]
+  }
+}
